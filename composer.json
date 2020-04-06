@@ -1,0 +1,22 @@
+{
+    "name": "agoit/email",
+    "description": "email helper",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "agoit",
+            "email": "335211818@qq.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {
+        "php": "> 7.0",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Agoit\\": "src"
+        }
+    }
+}
