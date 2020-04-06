@@ -1,12 +1,12 @@
 <?php
-namespace Agoit\Email;
+namespace agoit\email;
 
 /**
  * User: agoit
  * Date: 2020/04/05
  * Time: 17:37
  */
-class Email implements IEmail
+class Email
 {
     /* Public Variables */
     var $smtp_port;
@@ -24,8 +24,8 @@ class Email implements IEmail
     /* Constractor */
     function __construct($smtp_host = "", $smtp_port = 25,$auth = true,$user='',$pass='')
     {
-        $config=config('email');
-        $this->debug =$config['email_debug'] ;
+        $config=empty(config('email'))?[]:config('email');
+        $this->debug =true;
         $this->smtp_port = empty($smtp_port)?$config['email_port']:$smtp_port;
         $this->relay_host = empty($relay_host)?$config['relay_host']:$relay_host;
         $this->time_out = 30; //is used in fsockopen()

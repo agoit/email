@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Agoit\\": "src"
+            "agoit\\email\\": "src"
         }
     }
 }
